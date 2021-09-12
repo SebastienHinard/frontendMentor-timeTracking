@@ -1,0 +1,56 @@
+.report-header {
+    background: $darkBlue;
+    border-radius: 20px;
+    margin-bottom: 25px;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        background: $blue;
+        border-radius: 20px;
+        padding: 30px;
+    }
+
+    &__buttons {
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            appearance: none;
+            border: none;
+            background: transparent;
+            color: $desaturatedBlue;
+            cursor: pointer;
+            text-transform: capitalize;
+            font-size: 1em;
+
+            &:hover,
+            &:focus,
+            &.active {
+                color: $white;
+            }
+        }
+    }
+
+    &__avatar {
+        border: 3px solid $paleBlue;
+        border-radius: 50%;
+        width: 70px;
+        margin-right: 20px;
+    }
+
+    &__title {
+        font-size: 0.9em;
+        font-weight: 500;
+        color: $desaturatedBlue;
+        color: $paleBlue;
+
+        strong {
+            display: block;
+            font-size: 1.4em;
+            font-weight: 400;
+            color: $white;
+        }
+    }
+}

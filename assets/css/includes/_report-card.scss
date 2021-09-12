@@ -1,0 +1,60 @@
+.report-card__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @media (min-width: 992px) {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.report-card {
+    padding-top: 40px;
+    border-radius: 20px;
+
+    &--work {
+        background: url('/assets/images/icon-work.svg') no-repeat top -10px right 15px $cardColorWork;
+    }
+
+    &--play {
+        background: url('/assets/images/icon-play.svg') no-repeat top -10px right 15px $cardColorPlay;
+    }
+
+    &--study {
+        background: url('/assets/images/icon-study.svg') no-repeat top -10px right 15px $cardColorStudy;
+    }
+
+    &--exercise {
+        background: url('/assets/images/icon-exercise.svg') no-repeat top -10px right 15px $cardColorExercise;
+    }
+
+    &--social {
+        background: url('/assets/images/icon-social.svg') no-repeat top -10px right 15px $cardColorSocial;
+    }
+
+    &--self-care {
+        background: url('/assets/images/icon-self-care.svg') no-repeat top -10px right 15px $cardColorSelfCare;
+    }
+
+    &__content {
+        background: $darkBlue;
+        color: $paleBlue;
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 1em;
+        color: $white;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script> -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <div id="time-tracking-app" class="app-wrapper">
+    <header class="report-header">
+      <div class="report-header__top">
+        <img class="report-header__avatar" src="assets/images/image-jeremy.png" alt="Jeremy's avatar">
+        <h1 class="report-header__title">Report for <strong>Jeremy Robson</strong></h1>
+      </div>
+      <div class="report-header__buttons">
+          <button
+            v-for="(period, index) in periods"
+            type="button"
+            @click="select_period(index)"
+            :class="{active: selected_period === index}">
+            {{period}}
+          </button>
+        </div>
+    </header>
+
+    <main class="report-card__grid">
+      <div v-for="report in reports" :class="['report-card','report-card--' + slugify(report.title)]">
+        <div class="report-card__content">
+          <div class="report-card__header">
+            <h2 class="report-card__title">{{report.title}}</h2>
+            <button type="button">...</button>
+          </div>
+          <div class="report-card__body">
+            <p v-if="selected_period == 0">{{report.timeframes.daily.current | hours}}</p>
+            <p v-if="selected_period == 0">Yesterday - {{report.timeframes.daily.previous | hours}}</p>
+            <p v-if="selected_period == 1">{{report.timeframes.weekly.current | hours}}</p>
+            <p v-if="selected_period == 1">Last week - {{report.timeframes.weekly.previous | hours}}</p>
+            <p v-if="selected_period == 2">{{report.timeframes.monthly.current | hours}}</p>
+            <p v-if="selected_period == 2">Last month - {{report.timeframes.monthly.previous | hours}}</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        <p>
+          <span>Challenge by </span>
+          <a href="https://www.frontendmentor.io?ref=challenge" id="challenge_link" target="_blank">Frontend Mentor</a>.
+        </p>
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

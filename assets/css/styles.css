@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  background: #0f1424;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.app-wrapper {
+  padding: 20px;
+}
+
+.report-header {
+  background: #1c1f4a;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+.report-header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5847eb;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.report-header__buttons {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.report-header__buttons button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: transparent;
+  color: #6f76c8;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 1em;
+}
+
+.report-header__buttons button:hover, .report-header__buttons button:focus, .report-header__buttons button.active {
+  color: white;
+}
+
+.report-header__avatar {
+  border: 3px solid #bdc1ff;
+  border-radius: 50%;
+  width: 70px;
+  margin-right: 20px;
+}
+
+.report-header__title {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #6f76c8;
+  color: #bdc1ff;
+}
+
+.report-header__title strong {
+  display: block;
+  font-size: 1.4em;
+  font-weight: 400;
+  color: white;
+}
+
+.report-card__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+}
+
+@media (min-width: 768px) {
+  .report-card__grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .report-card__grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.report-card {
+  padding-top: 40px;
+  border-radius: 20px;
+}
+
+.report-card--work {
+  background: url("/assets/images/icon-work.svg") no-repeat top -10px right 15px #ff8c66;
+}
+
+.report-card--play {
+  background: url("/assets/images/icon-play.svg") no-repeat top -10px right 15px #56c2e6;
+}
+
+.report-card--study {
+  background: url("/assets/images/icon-study.svg") no-repeat top -10px right 15px #ff5c7c;
+}
+
+.report-card--exercise {
+  background: url("/assets/images/icon-exercise.svg") no-repeat top -10px right 15px #4acf81;
+}
+
+.report-card--social {
+  background: url("/assets/images/icon-social.svg") no-repeat top -10px right 15px #7536d3;
+}
+
+.report-card--self-care {
+  background: url("/assets/images/icon-self-care.svg") no-repeat top -10px right 15px #f1c65b;
+}
+
+.report-card__content {
+  background: #1c1f4a;
+  color: #bdc1ff;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.report-card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.report-card__title {
+  font-size: 1em;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */
